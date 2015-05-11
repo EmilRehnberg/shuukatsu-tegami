@@ -1,0 +1,47 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Full Size Formal Letter
+% http://www.LaTeXTemplates.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[
+	pagenumber=false, % Removes page numbers from page 2 onwards
+	parskip=half, % Separates paragraphs with some whitespace, use parskip=full for more space or comment out to return to default
+	fromalign=right, % Aligns the from address to the right
+	foldmarks=true, % Prints small fold marks on the left of the page
+	addrfield=true % Set to false to hide the addressee section - you will then want to adjust the height of the body of the letter on the page by adding the following in this section: \makeatletter \@setplength{refvpos}{\useplength{toaddrvpos}} \makeatletter
+	]{scrlttr2}
+
+\usepackage[swedish]{babel}
+\usepackage[utf8]{inputenc}
+
+\renewcommand*{\raggedsignature}{\raggedright}
+
+\setkomavar{fromname}{Emil Rehnberg}
+\setkomavar{fromaddress}{Sköntorpsvägen 102\\12053 Årsta}
+\setkomavar{signature}{Emil Rehnberg}
+
+\date{\today}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE
+%----------------------------------------------------------------------------------------
+
+\begin{letter}{FILL} % Addressee name and address
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+\opening{Hej på er!}
+
+FILL
+
+\closing{Med vänlig hälsning,}
+
+%----------------------------------------------------------------------------------------
+
+\end{letter}
+
+\end{document}
